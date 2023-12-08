@@ -1,0 +1,110 @@
+div {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+}
+.tri {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid green;
+    margin-left: 300px;
+}
+.tri2 {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid green;
+    margin-left: 250px;
+}
+.tri3 {
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 300px solid green;
+    margin-left: 200px
+}
+.tri4 {
+    width: 100px;
+    height: 100px;
+    background: brown;
+    margin-left: 300px;
+}
+.tri5 {
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+    margin-left: 325px;
+    position:relative;
+    bottom: 650px
+}
+.tri6 {
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+    margin-left: 300px;
+    position: relative;
+    bottom: 550px
+}
+.tri7 {
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+    margin-left: 370px;
+    position: relative;
+    bottom: 550px
+}
+.tri8 {
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+    margin-left: 310px;
+    position: relative;
+    bottom: 475px
+}
+.tri9 {
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+    margin-left: 350px;
+    position: relative;
+    bottom: 450px
+}
+.tri10 {
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+    margin-left: 250px;
+    position: relative;
+    bottom: 450px
+}
+.tri11 {
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+    margin-left: 400px;
+    position: relative;
+    bottom: 450px
+}
+
+
+.Tree {
+    width: 700px;
+    height: 700px;
+}
