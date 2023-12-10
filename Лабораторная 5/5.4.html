@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обработка</title>
+</head>
+<body>
+    <h2>Обработка</h2>
+    <input type="text" id="inputString" placeholder="Введите слово">
+    <button onclick="processString()">Начать</button>
+    <p id="output"></p>
+
+    <script>
+        function processString() {
+            let inputString = document.getElementById('inputString').value;
+            let processedString = '';
+
+            for (let i = 0; i < inputString.length; i++) {
+                if (i % 2 === 0) {
+                    processedString += inputString[i].toUpperCase();
+                } else {
+                    processedString += inputString[i].toLowerCase();
+                }
+            }
+
+            document.getElementById('output').innerHTML = processedString;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Сумма элементов массива</title>
+</head>
+<body>
+    <input type="text" id="input" placeholder="Введите элементы массива, разделенные запятой">
+    <button onclick="calculateSum()">Вычислить сумму</button>
+    <p id="result"></p>
+    <script>
+        function calculateSum() {
+            var input = document.getElementById('input').value;
+            var array = input.split(',').map(Number);
+            array = array.filter(function (element) {
+                function hasEvenDigitsInIntegerPart(number) {
+                    var integerValue = Math.abs(Math.trunc(number));
+                    while (integerValue > 0) {
+                        if ((integerValue % 10) % 2 === 1) {
+                            return false;
+                        }
+                        integerValue = Math.floor(integerValue / 10);
+                    }
+                    return true;
+                }
+                return hasEvenDigitsInIntegerPart(element);
+            });
+            var firstIndex = -1;
+            var lastIndex = -1;
+            for (var i = 0; i < array.length; i++) {
+                if (Math.abs(array[i] - Math.PI) <= 1e-5) {
+                    if (firstIndex === -1) {
+                        firstIndex = i;
+                    }
+                    lastIndex = i;
+                }
+            }
+            var sum = 0;
+            if (firstIndex !== -1 && lastIndex !== -1) {
+                for (var j = firstIndex + 1; j < lastIndex; j++) {
+                    sum += array[j];
+                }
+            } else {
+                sum = "Нет элементов удовлетворяющих условию";
+            }
+            document.getElementById('result').innerHTML = "Сумма элементов массива: " + sum;
+        }
+    </script>
+</body>
+</html>

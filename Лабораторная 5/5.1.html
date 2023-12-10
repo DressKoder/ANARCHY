@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Фибоначчи</title>
+</head>
+<body>
+
+    <input type="number" id="input" placeholder="Введите N">
+    <button onclick="findFibonacci()">Найти N-ый член</button>
+    <p id="result"></p>
+
+    <script>
+        function findFibonacci() {
+            var n = document.getElementById('input').value;
+            var a = 1;
+            var b = 1;
+            var c;
+
+            if (n == 1 || n == 2) {
+                document.getElementById('result').innerHTML = "N-ый член: 1";
+            } else {
+                for (var i = 3; i <= n; i++) {
+                    c = a + b;
+                    a = b;
+                    b = c;
+                }
+                document.getElementById('result').innerHTML = "N-ый член: " + c;
+            }
+        }
+    </script>
+
+</body>
+</html>
