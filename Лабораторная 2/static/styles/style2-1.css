@@ -1,0 +1,24 @@
+.brow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.bigb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.b1 {
+  height: 100px;
+  width: 100px;
+  background-color: green;
+}
+
+.b2 {
+  height: 100px;
+  width: 100px;
+}
