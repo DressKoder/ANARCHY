@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.admin-panel {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+    .admin-panel form {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .admin-panel ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .admin-panel li {
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    .admin-panel button {
+        cursor: pointer;
+        text-align: center;
+    }
