@@ -1,0 +1,113 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+div {
+    margin: 0 auto;
+    text-align: left;
+    width: 400px;
+}
+
+
+h1 {
+    font-size: large;
+}
+
+.desktop {
+    display: flex;
+}
+
+.tablet {
+    display: flex;
+}
+
+.send_button {
+    width: 400px;
+    height: 50px;
+    font-size: large;
+}
+
+.reset_button {
+    float: right;
+}
+
+table {
+    width: 400px;
+}
+.container {
+    background: none;
+    background-image: url(data:image/png;base64,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);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100vh;
+    height: 100vh;
+    border: black 1px solid;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+p {
+    text-align: center;
+}
+
+table, td {
+    border: 1px black solid;
+}
+
+legend {
+    background-color: rgb(186, 238, 232);
+    color: #000;
+    padding: 2px 16px;
+    border: black dashed 1px;
+  }
+fieldset {
+    background: rgb(233, 233, 175);
+    border: black dashed 1px;
+}
+
+@media (min-width:768px) and (max-width:1200px) {
+    .container {
+    width: 768px;
+    }
+    .desktop {
+        display: flex;
+        height: 100%;
+    }
+    label {
+        display: none;
+    }
+
+    .surname, .name, .patronymic, .tel, .email, .birth_date, .work_place, .adress {
+        width: 400px;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .education {
+        width: 400px;
+        padding: 0;
+    }
+}
+
+
+@media (min-width:1200px) {
+    .tablet {
+        display: flex;
+    }
+    input::placeholder {
+        color: transparent;
+      }
+    .container {
+        width: 1200px;
+        }
+    .surname, .name, .patronymic, .tel, .email, .birth_date, .work_place, .adress  {
+        box-sizing: border-box;
+        width: 400px;
+        padding: 0;
+        
+    }
+    .education {
+        width: 400px;
+        padding: 0;
+    }
+}

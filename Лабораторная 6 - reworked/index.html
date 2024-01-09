@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Онлайн магазин одежды</title>
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+
+</head>
+
+<body>
+    <form>
+        <div class="container tablet">
+            <h1>Оформление заказа</h1>
+            <div class="tablet">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Артикул товара</td>
+                            <td><textarea id="book_number" name="book_number" rows="2" cols="4"></textarea></td>
+                            <td><textarea id="book_number" name="book_number" rows="2" cols="4"></textarea></td>
+                            <td><textarea id="book_number" name="book_number" rows="2" cols="4"></textarea></td>
+                            <td><textarea id="book_number" name="book_number" rows="2" cols="4"></textarea></td>
+                            <td><textarea id="book_number" name="book_number" rows="2" cols="4"></textarea></td>
+                            <td><textarea id="book_number" name="book_number" rows="2" cols="4"></textarea></td>
+                            <td><textarea id="book_number" name="book_number" rows="2" cols="4"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </form>
+    <br>
+    <div class="tablet">
+        <form id="orderForm" onsubmit="return validateForm()">
+            <label for='username'>Фамилия:</label><br>
+            <input type='text' id='surname' name='surname' placeholder="Фамилия" class="surname" /><br>
+            <label for='name'>Имя:</label><br>
+            <input type='text' id='name' name='name' placeholder="Имя" class="name" /><br>
+            <label for='patronymic'>Отчество:</label><br>
+            <input type='text' id='patronymic' name='patronymic' placeholder="Отчество" class="patronymic" /><br>
+            <label for='size'>Размер одежды</label><br>
+            <select name="select" id="select" class="size">
+                <option value="value" selected>XS</option>
+                <option value="value2">S</option>
+                <option value="value3">M</option>
+                <option value="value4">L</option>
+                <option value="value5">XL</option>
+                <option value="value6">XXL</option>
+            </select><br>
+            <label for='tel'>Контактный телефон:</label><br>
+            <input type='tel' id='tel' name='tel' placeholder="Номер телефона +7 (___) ___-__-__" class="tel" /><br>
+            <label for='adress'>Домашний адрес:</label><br>
+            <input type='text' id='adress' name='adress' placeholder="Домашний адрес" class="adress" /><br>
+            <label for='email'>Адрес электронной почты:</label><br>
+            <input type='email' id='email' name='email' placeholder="Адрес электронной почты" class="email" /><br><br>
+            <fieldset>
+                <legend>Предоставьте согласие</legend>
+                <label style="display: flex;"><input type="radio" value="pers_data"> Я ознакомлен/а с Политикой конфиденциальности и согласен/на на обработку персональных данных</label>
+            </fieldset>
+            <p>
+                <div class="desktop tablet">
+                    <form method='POST'>
+                        <button class="send_button" type="submit" name="s_button">Подтвердить заказ и перийти к оплате</button>
+                    </form>
+
+                </div>
+            </p>
+        </form>
+        <script>
+            function validateForm() {
+                var surname = document.forms["orderForm"]["surname"].value;
+                var name = document.forms["orderForm"]["name"].value;
+                var tel = document.forms["orderForm"]["tel"].value;
+                var email = document.forms["orderForm"]["email"].value;
+
+                if (surname == "" || name == "" || tel == "" || email == "") {
+                    alert("Пожалуйста, заполните все обязательные поля: Фамилия, Имя, Телефон, Email");
+                    return false;
+                }
+
+                var telPattern = /^\+?\d{11}$/;
+                if (!tel.match(telPattern)) {
+                    alert("Пожалуйста, введите корректный номер телефона");
+                    return false;
+                }
+
+                var emailPattern = /\S+@\S+\.\S+/;
+                if (!email.match(emailPattern)) {
+                    alert("Пожалуйста, введите корректный адрес электронной почты");
+                    return false;
+                }
+
+                submitForm();
+                return false;
+            }
+
+            function submitForm() {
+                var orderForm = document.getElementById("orderForm");
+                var surname = orderForm["surname"].value;
+                var name = orderForm["name"].value;
+                var patronymic = orderForm["patronymic"].value;
+                var size = orderForm["size"].value;
+                var tel = orderForm["tel"].value;
+                var address = orderForm["address"].value;
+                var email = orderForm["email"].value;
+
+                console.log("Фамилия: " + surname);
+                console.log("Имя: " + name);
+                console.log("Отчество: " + patronymic);
+                console.log("Размер одежды: " + size);
+                console.log("Телефон: " + tel);
+                console.log("Адрес: " + address);
+                console.log("Email: " + email);
+
+                orderForm.reset();
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>
